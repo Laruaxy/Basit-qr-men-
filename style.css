@@ -1,0 +1,939 @@
+@import url("https://fonts.googleapis.com/css2?family=Belanosima&family=Lato&family=Mynerve&family=Pangolin&display=swap");
+:root {
+  --bg-color: #70e00e;
+  --second-bg-color: #112e42;
+  --text-color: #cf5d5d;
+  --main-color: #016301;
+}
+/* header */
+.header {
+  z-index: 2;
+  position: fixed;
+  text-align: end;
+  display: flex-box;
+  background: linear-gradient(45deg, #1f4037, #99f2c883);
+  top: 40px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 13vh;
+  transition: top background-color 0.3s ease;
+}
+.header:not(.active) {
+  transition: top 0.9s ease;
+  top: -70px;
+}
+/* Kategori */
+.menu-container {
+  user-select: none;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu {
+  overflow-x: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.kategori-listesi {
+  list-style: none;
+  padding: 0;
+  margin: 7;
+  display: flex;
+  align-items: center;
+}
+
+.kategori-listesi li {
+  margin-right: 10px;
+}
+
+.kategori-listesi li:last-child {
+  margin-right: 0;
+}
+
+.kategori-listesi li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 15px;
+  border: 2px solid #ffa500;
+  border-radius: 20px;
+  background-color: rgba(255, 165, 0, 0.8);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.kategori-listesi li a:hover {
+  background-color: rgba(255, 140, 0, 1);
+  border-color: #fff;
+}
+
+.kategori-listesi li a.active {
+  background-color: rgba(255, 140, 0, 1);
+  border-color: #fff;
+}
+
+.kategori-listesi li a {
+  position: relative;
+  z-index: 1;
+}
+
+.kategori-listesi li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background-color: rgba(255, 165, 0, 0.3);
+  transition: opacity 0.2s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.kategori-listesi li a:hover:before {
+  opacity: 1;
+}
+/*Card(Menüler)*/
+/* Arkaplanlar */
+/* Arkaplan Başlıklar ayarları */
+.card2 h2 {
+  text-align: center;
+  right: 3hv;
+  margin: auto;
+  font-family: sans-serif;
+  margin-right: 5%;
+  font-weight: 500;
+}
+/* Kart ve div(menü) ayarları*/
+.card2 > div {
+  flex: 1;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+.card2 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: auto;
+  background-color: rgba(39, 38, 38, 0.651);
+  transition: all 0.9s;
+}
+.card > div {
+  flex: 1;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  height: auto;
+  background-color: rgba(148, 9, 9, 0.651);
+  transition: all 0.9s;
+}
+/* Body ve arka plan resmi*/
+/*Sosyal medya*/
+.home-sci {
+  position: absolute;
+  bottom: 4rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  color: var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+}
+.home-sci a:hover {
+  color: var(--bg-color);
+}
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.home-sci a:hover::before {
+  width: 100%;
+}
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 8.5rem;
+  height: 3rem;
+  bottom: -30px;
+  text-decoration: none;
+}
+.btn-box .btn {
+  font-family: sans-serif;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5;
+}
+.btn-box .btn:hover {
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+.btn-box .btn:nth-child(2):hover {
+  color: var(--bg-color);
+}
+.btn-box .btn:nth-child(2)::before {
+  background: var(--main-color);
+}
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 250vh;
+}
+.yazı {
+  color: rgb(0, 255, 149);
+  user-select: none;
+  font-family: "Prompt", sans-serif;
+  font-size: 15vh;
+  opacity: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.card h2 {
+  text-align: center;
+  right: 3hv;
+  margin: auto;
+  margin-right: 5%;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+#menu h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+.resim {
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  top: 0%;
+  margin-top: 0vh;
+  padding: 0;
+  background: url(images/resim.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+/* Menü resim ayarları ve menü ayarları*/
+.menu4 img,
+.menu3 img,
+.menu2 img,
+.menu1 img {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-10%);
+}
+
+.menu2 {
+  font-size: 15px;
+  position: relative;
+  border-radius: 55px;
+  top: -36vh;
+  margin-left: 0;
+  width: 200px;
+  padding: 15px;
+  margin-left: 150vh;
+  margin-top: -40vh;
+  border: 5px solid #7aa308;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  left: 45px;
+}
+
+.menu4 {
+  font-size: 15px;
+  position: relative;
+  border-radius: 55px;
+  top: -100vh;
+  margin-left: 0;
+  width: 200px;
+  padding: 15px;
+  margin-left: 157vh;
+  margin-top: -40vh;
+  border: 5px solid #6db45b;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  left: -50vh;
+}
+
+.menu3 {
+  font-size: 15px;
+  position: relative;
+  top: -71vh;
+  margin-right: 30vh;
+  width: 200px;
+  border-radius: 55px;
+  padding: 15px;
+  margin-left: 152vh;
+  margin-top: -40vh;
+  border: 5px solid #011d7a;
+  right: 98vh;
+  margin-bottom: 20px;
+}
+
+.menu1 {
+  font-size: 15px;
+  position: relative;
+  left: 10px;
+  width: 200px;
+  padding: 15px;
+  border-radius: 55px;
+  border: 5px solid #970202;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.logo {
+  top: -3rem;
+  position: relative;
+  left: 0px;
+  width: 55px;
+  height: 50px;
+  margin: 15px;
+}
+/* Responsive(Mobil,Tablet) Ayarları*/
+@media only screen and (max-width: 700px) {
+  .menu-container {
+    background-color: rgba(51, 51, 51, 0.95);
+    padding: 0px 0;
+    text-align: center;
+  }
+  .menu-btn {
+    margin-top: 20%;
+  }
+  .kategori-listesi {
+    margin: 15;
+    padding: 9px;
+  }
+  .kategori-listesi li {
+    margin: 5px;
+  }
+  .logo {
+    top: -3.8rem;
+    position: relative;
+    margin-right: 5%;
+  }
+  .header {
+    height: 4rem;
+    margin-top: 2.3rem;
+  }
+  .header:not(.active) {
+    margin-top: -2rem;
+  }
+
+  .name {
+    font-size: 50%;
+  }
+  .resim .welcome {
+    font-size: 45%;
+    z-index: 999;
+  }
+
+  .card2 {
+    width: 100%;
+    display: table;
+    position: relative;
+    height: auto;
+    background-color: rgba(97, 184, 235, 0.863);
+  }
+
+  .card {
+    width: 100%;
+    display: table;
+    position: relative;
+    height: auto;
+    background-color: rgba(39, 38, 38, 0.651);
+  }
+  .card2 > div,
+  .card > div {
+    margin: auto;
+    flex: 1;
+    font-family: "Prompt", sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 15px;
+    top: 0;
+  }
+  .menu4 img,
+  .menu3 img,
+  .menu2 img,
+  .menu1 img {
+    position: relative;
+    margin-right: 0;
+    margin-left: 15%;
+  }
+}
+@media only screen and (min-height: 1024px) {
+  .name {
+    font-size: 10vh;
+  }
+  .menu4 img,
+  .menu3 img,
+  .menu2 img,
+  .menu1 img {
+    position: relative;
+    margin-right: 0;
+    margin-left: 15%;
+  }
+  #menu-ac-label1 {
+    display: flex;
+    left: 0px;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    height: 3rem;
+    width: auto;
+    margin-left: 15px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: large;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  .larux {
+    font-size: 35%;
+  }
+  #yazı2 {
+    font-size: 25%;
+    z-index: 999;
+  }
+
+  .header {
+    height: 10px;
+  }
+  .card2 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    position: relative;
+    height: 200vh;
+    background-color: rgba(97, 184, 235, 0.863);
+  }
+
+  .menu {
+    width: 0rem;
+    top: 45%;
+    height: 0px;
+    align-items: left;
+  }
+
+  .card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    position: relative;
+    height: 200vh;
+    background-color: rgba(39, 38, 38, 0.651);
+  }
+  #menu-yazı {
+    font-size: 3rem;
+    font-family: "Belanosima", sans-serif;
+  }
+  .card2 > div,
+  .card > div {
+    flex: 5;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0;
+  }
+}
+.card #menu-yazı {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Belanosima", sans-serif;
+}
+.card2 #menu-yazı {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Belanosima", sans-serif;
+}
+/* Yukarı çıkma butonu*/
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollToTopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #02393d77;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.arrow-up {
+  position: absolute;
+  bottom: -5px;
+  color: var(--bg-color);
+  font-size: 2.8rem;
+}
+
+#scrollToTopButton:hover {
+  background-color: #0b6dafb6;
+}
+
+.scroll-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top.active #scrollToTopButton {
+  transform: scale(0.8);
+}
+/* Menü fiyat gösterme kısmı ve Animasyon */
+.menu4::after,
+.menu3::after,
+.menu2::after,
+.menu1::after {
+  content: attr(data-price);
+  position: absolute;
+  top: calc(50% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff5757;
+  padding: 4px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Prompt", sans-serif;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.menu4:hover::after,
+.menu3:hover::after,
+.menu2:hover::after,
+.menu1:hover::after,
+.menu4.show-price::after,
+.menu3.show-price::after,
+.menu2.show-price::after,
+.menu1.show-price::after {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.5s;
+}
+
+/* İndirimsiz fiyatı göstermek için iç içe div yapısı */
+.menu4,
+.menu3,
+.menu2,
+.menu1 {
+  position: relative;
+}
+
+.menu4 .original-price,
+.menu3 .original-price,
+.menu2 .original-price,
+.menu1 .original-price {
+  content: attr(original-price);
+  position: absolute;
+  bottom: calc(41% + 5px);
+  left: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #f7e2bc;
+  transform: translateX(-50%);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: "Prompt", sans-serif;
+  color: #333;
+  text-decoration: line-through;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 5.5s, transform 5.5s;
+}
+.menu4:hover .original-price,
+.menu3:hover .original-price,
+.menu2:hover .original-price,
+.menu1:hover .original-price,
+.menu4.show-price .original-price,
+.menu3.show-price .original-price,
+.menu2.show-price .original-price,
+.menu1.show-price .original-price {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(49% + 5px);
+  transition: opacity 0.3s, bottom 0.9s ease-in;
+}
+
+@keyframes sa {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 30s;
+  }
+  100% {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 3s;
+  }
+}
+
+.menu4:hover,
+.menu3:hover,
+.menu2:hover,
+.menu1:hover,
+.menu4.show-price,
+.menu3.show-price,
+.menu2.show-price,
+.menu1.show-price {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  animation: name duration timing-function delay iteration-count direction
+    fill-mode;
+  animation: sa 0.9s alternate ease-out forwards;
+}
+
+.resim .welcome {
+  color: rgb(1, 0, 44, 1);
+  user-select: none;
+  font-family: "Prompt", sans-serif;
+  font-size: 10vh;
+  opacity: 1;
+  padding: 0;
+  top: -15vh;
+  margin: 0;
+}
+/* Footer */
+.footer-asa {
+  width: 100%;
+  position: absolute;
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: space-between;
+  height: 7rem;
+  background: #333;
+}
+
+.cyrp {
+  font-family: "Belanosima", sans-serif;
+  position: absolute;
+  bottom: 30%;
+  left: 10%;
+  justify-content: space-between;
+  margin: 0;
+  font-weight: 500;
+  font-size: 1rem;
+  user-select: none;
+}
+/*içeçek menuleri*/
+.menu-item {
+  font-family: "Pangolin", cursive;
+  font-size: large;
+  text-align: left;
+  margin-top: 20%;
+}
+
+.menu-item-title {
+  text-align: left;
+  margin-top: -16%;
+}
+
+.menu-item-price {
+  text-align: right;
+  margin-top: -16%;
+}
+/*Koyu mod ayarları*/
+/* Dark Mode Açma/Kapama Tuşu */
+.dark-mode-switch {
+  position: relative;
+  margin: 10px 10px;
+  left: 0px;
+  top: 30%;
+  width: 60px;
+  height: 30px;
+  background-color: #969494;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.dark-mode-slider {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 26px;
+  height: 26px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dark-mode-slider:before {
+  content: "☀️";
+  display: block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 26px;
+  color: #777;
+  transition: opacity 0.3s;
+}
+
+body.dark-mode .dark-mode-slider {
+  transform: translateX(30px);
+  background-color: #000;
+}
+
+body.dark-mode .dark-mode-slider:before {
+  content: "🌑";
+  color: #f7f7f7;
+}
+/* Koyu tema */
+.dark-mode .card {
+  --secondary-color: #022d66;
+  background-color: var(--secondary-color);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.dark-mode .card2 {
+  --secondary-color: #05412a;
+  background-color: var(--secondary-color);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.dark-mode footer {
+  --secondary-color: rgb(241, 0, 0);
+  background-color: var(--secondary-color);
+  color: rgb(248, 246, 246);
+  transition: 0.3s;
+}
+
+.dark-mode .header {
+  background: linear-gradient(45deg, #000000, #110e0e62);
+}
+.dark-mode .menu-container {
+  background-color: rgba(15, 10, 10, 0.671);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.dark-mode .resim {
+  opacity: 1;
+}
+.dark-mode .kategori-listesi li a {
+  background-color: rgba(150, 97, 0, 0.8);
+  border: 2px solid #a86e02;
+}
+.dark-mode .menu-btn {
+  background-color: #28c0a5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .menu-btn a {
+  color: #e0e0e0;
+}
+
+.dark-mode .menu-btn:hover {
+  background-color: #25695e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .menu-btn a:hover {
+  color: #a0a0a0;
+}
+/*İndirim pop up*/
+.indirim {
+  z-index: 999;
+  position: fixed;
+  right: -300px; /* Div, sağdan başlangıçta görünmez olacak */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9c7777;
+  padding: 20px;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease-in-out;
+}
+.indirim .title {
+  font-family: sans-serif;
+  font-weight: 800;
+  font-size: large;
+}
+.indirim p {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #5a2a03;
+  font-size: 1rem;
+}
+.indirim .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 6cap;
+  height: 3rem;
+  bottom: 5px;
+  left: 23%;
+  text-decoration: none;
+}
+.indirim .btn-box .btn {
+  font-family: sans-serif;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 100%;
+  background: #423232;
+  border: 2px solid #28c0a5;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  z-index: 1;
+  color: #aebae0;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.5;
+}
+.indirim .btn-box .btn::before {
+  content: "";
+  width: 0%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  background: rgba(106, 7, 199, 0.527);
+  transition: 0.3s;
+}
+.indirim .btn-box .btn:hover::before {
+  width: 100%;
+}
+.dark-mode .indirim .btn-box .btn {
+  background: #110e0e;
+}
+.dark-mode .indirim .btn-box .btn::before {
+  background: rgb(4, 158, 68);
+}
+.dark-mode .indirim {
+  background-color: #271e1e;
+  transition: 0.3s;
+}
+.dark-mode .home-sci a {
+  border: 3px solid #737502;
+  transition: 0.3s;
+}
+.dark-mode .home-sci i {
+  color: #e7577b;
+  transition: 0.3s;
+}
+.open {
+  position: fixed;
+  width: 265px;
+  align-items: center;
+  justify-content: center;
+  top: 38%;
+  right: -250px;
+  height: 145px;
+  border: 0px solid #e0e0e0;
+  transition: all 1s ease-in-out; /* Burada tek seferde transition tanımlanmış */
+}
+.open i {
+  position: absolute;
+  left: -20px;
+  top: 50px;
+  font-size: 2.4rem;
+}
+.open:hover > .indirim {
+  transform: translateY(-50%) translateX(-18rem); /* İndirim öğesini başlangıçta tamamen sola taşıyın */
+  transition: all 1s ease-in-out;
+}
+
+.open .btn-box .btn:hover .indirim {
+  background: red;
+}
+.indirim.closed {
+  transform: translateY(-50%) translateX(18rem);
+}
