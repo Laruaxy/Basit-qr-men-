@@ -207,7 +207,7 @@
   font-weight: 600;
   letter-spacing: 0.1rem;
   color: var(--bg-color);
-  z-index: 1;
+  z-index: 0;
   text-decoration: none;
   overflow: hidden;
   transition: 0.5;
@@ -370,6 +370,9 @@ body {
     background-color: rgba(51, 51, 51, 0.95);
     padding: 0px 0;
     text-align: center;
+  }
+  .indirim{
+    z-index: 999;
   }
   .menu-btn {
     margin-top: 20%;
@@ -828,7 +831,7 @@ body.dark-mode .dark-mode-slider:before {
 .indirim {
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 99;
   position: fixed;
   right: -300px; /* Div, sağdan başlangıçta görünmez olacak */
   top: 50%;
@@ -882,7 +885,7 @@ body.dark-mode .dark-mode-slider:before {
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.1rem;
-  z-index: 1;
+  z-index: 999;
   color: #aebae0;
   text-decoration: none;
   overflow: hidden;
