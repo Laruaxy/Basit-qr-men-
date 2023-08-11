@@ -937,3 +937,7 @@ body.dark-mode .dark-mode-slider:before {
 .indirim.closed {
   transform: translateY(-50%) translateX(18rem);
 }
+.indirim .p soan{
+		color:darkred;
+font-weight:600;
+}
