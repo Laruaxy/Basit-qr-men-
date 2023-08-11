@@ -793,25 +793,6 @@ input:checked ~ .bxs-moon {
 input:checked ~ .toggle {
   background: #f8f8f8;
 }
-.animatebg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 4px solid rgb(0, 0, 0);
-  z-index: 1;
-  clip-path: circle(-100% at var(--x-pos, -60%) var(--y-pos, -60%));
-  transition: clip-path 3s ease, border 1s ease; /* Hem clip-path hem de border için geçiş efekti */
-}
-
-input:checked ~ .animatebg {
-  --x-pos: 100%; /* X pozisyonunu değiştir */
-  --y-pos: 100%; /* Y pozisyonunu değiştir */
-  border: 3px solid rgb(255, 255, 255);
-  transition: clip-path 3s ease, border 1s ease, --x-pos 1s ease,
-    --y-pos 1s ease; /* Geçiş efektlerini burada belirtin */
-}
 /* Koyu tema */
 .dark-mode .card {
   --secondary-color: #022d66;
