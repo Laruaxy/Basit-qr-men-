@@ -826,6 +826,8 @@ body.dark-mode .dark-mode-slider:before {
 }
 /*İndirim pop up*/
 .indirim {
+  justify-content: center;
+  align-items: center;
   z-index: 999;
   position: fixed;
   right: -300px; /* Div, sağdan başlangıçta görünmez olacak */
@@ -838,15 +840,23 @@ body.dark-mode .dark-mode-slider:before {
   transition: all 1s ease-in-out;
 }
 .indirim .title {
+  position: relative;
+  justify-content: center;
+  align-items: center;
   font-family: sans-serif;
   font-weight: 800;
   font-size: large;
+  left: 15%;
 }
 .indirim p {
+  justify-content: center;
+  align-items: center;
+  position: relative;
   font-family: sans-serif;
   font-weight: 600;
   color: #5a2a03;
   font-size: 1rem;
+  margin: 10px 10px 20px 20px;
 }
 .indirim .btn-box {
   position: relative;
@@ -938,6 +948,16 @@ body.dark-mode .dark-mode-slider:before {
   transform: translateY(-50%) translateX(18rem);
 }
 .indirim p span {
+  position: relative;
+  margin-right: 15px;
   color: #011d7a;
-  font-weight: 600;
+  font-weight: 900;
+  font-size: 1.2rem;
+  left: 10%;
+}
+.dark-mode .indirim p{
+  color: #9bac08;
+}
+.dark-mode .indirim p span{
+  color: #ff0000;
 }
