@@ -6,20 +6,24 @@ anchors.forEach((anchor) => {
   anchor.addEventListener("click", scrollToElement);
 });
 
-function scrollToElement(targetElement) {
-  const duration = 800; // Kaydırma süresi (ms)
+function scrollToElement(event) {
+  event.preventDefault();
+  const targetId = this.getAttribute("href").substring(1);
+  const targetElement = document.getElementById(targetId);
+  const targetOffset = targetElement.offsetTop;
+
+  const duration = 800;
   const start = window.pageYOffset;
   const startTime =
     "now" in window.performance ? performance.now() : new Date().getTime();
 
-  // Animasyonlu kaydırma işlemi
   function scrollStep(timestamp) {
     const currentTime =
       "now" in window.performance ? performance.now() : new Date().getTime();
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
 
-    window.scrollTo(0, start + (targetElement.offsetTop - start) * progress);
+    window.scrollTo(0, start + (targetOffset - start) * progress);
 
     if (timeElapsed < duration) {
       window.requestAnimationFrame(scrollStep);
@@ -28,20 +32,6 @@ function scrollToElement(targetElement) {
 
   window.requestAnimationFrame(scrollStep);
 }
-
-const categoryLinks = document.querySelectorAll(".kategori-listesi li a");
-
-categoryLinks.forEach((link) => {
-  link.addEventListener("click", function (event) {
-    event.preventDefault();
-    const targetId = this.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    if (targetElement) {
-      scrollToElement(targetElement);
-    }
-  });
-});
 
 window.onscroll = function () {
   scrollFunction();
@@ -212,4 +202,9 @@ menu.addEventListener("touchmove", (event) => {
   menu.scrollTo({
     left: scrollAmount,
   });
+});
+const facebookLink = document.querySelector(".bxl-instagram");
+
+facebookLink.addEventListener("click", function () {
+  window.open("https://www.instagram.com/kule_mevlana_restaurant/", "_blank");
 });
