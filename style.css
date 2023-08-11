@@ -949,11 +949,11 @@ body.dark-mode .dark-mode-slider:before {
 }
 .indirim p span {
   position: relative;
-  margin-right: 15px;
+  margin-right: 29px;
   color: #011d7a;
   font-weight: 900;
   font-size: 1.2rem;
-  left: 10%;
+  left: 17%;
 }
 .dark-mode .indirim p{
   color: #9bac08;
