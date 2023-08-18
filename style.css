@@ -989,3 +989,31 @@ input:checked ~ .toggle {
 .dark-mode .indirim p span {
   color: #ff0000;
 }
+.card2 .menu1.show-price i,
+.card2 .menu2.show-price i,
+.card2 .menu3.show-price i,
+.card2 .menu4.show-price i, 
+.card .menu1.show-price i,
+.card .menu2.show-price i,
+.card .menu3.show-price i,
+.card .menu4.show-price i,
+.card2 .menu1:hover i,
+.card2 .menu2:hover i,
+.card2 .menu3:hover i,
+.card2 .menu4:hover i, 
+.card .menu1:hover i,
+.card .menu2:hover i,
+.card .menu3:hover i,
+.card .menu4:hover i {
+  font-size: 1.1rem;
+  color: #fff;
+}
+.card2 i,
+.card i {
+  font-size: 0.9rem;
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  transition: font-size 0.3s, color 2s;
+  color: #4e6380;
+}
